@@ -27,7 +27,7 @@ step 1: Update Python code
         return Builder.load_file(self.resource_path('gui.kv'))
 
     also update the kv file
-
+    source: app.resource_path('level1/level2/img2_2.png')
 
 1.3 update the if __name__ statement for the MEIPASS path
 

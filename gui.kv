@@ -20,7 +20,7 @@
                     text: 'img 1_1: hardcoded in kv file'
                 Image:
                     id: img11
-                    source: 'level1/img1_1.png'
+                    source: app.resource_path('level1/img1_1.png')
                 MyButton:
                     id: btn_img11
                     text: 'test hardcoded path/to/source passed from kv to py'
@@ -48,7 +48,7 @@
                     text: 'img 2_1: hardcoded in kv file'
                 Image:
                     id: img21
-                    source: 'level1/level2/img2_1.png'
+                    source: app.resource_path('level1/level2/img2_1.png')
                 MyButton:
                     id: btn_img21
                     text: 'test hardcoded path/to/source passed from kv to py'
@@ -60,7 +60,7 @@
                     text: 'img 2_2: hardcoded in kv file'
                 Image:
                     id: img22
-                    source: 'level1/level2/img2_2.png'
+                    source: app.resource_path('level1/level2/img2_2.png')
                 MyButton:
                     id: btn_img22
                     text: 'test hardcoded path/to/source passed from kv to py'
