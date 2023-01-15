@@ -26,6 +26,8 @@ step 1: Update Python code
         self.title = 'Testing folder levels for Kivy spec file'
         return Builder.load_file(self.resource_path('gui.kv'))
 
+    also update the kv file
+
 
 1.3 update the if __name__ statement for the MEIPASS path
 
