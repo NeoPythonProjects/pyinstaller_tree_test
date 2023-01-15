@@ -1,0 +1,35 @@
+The purpose of this app is to test how to incorporate multiple folder levels in kivy
+
+In the backup app we've seen that you can manually add one level
+Can you manually add 2?
+
+Can we use the Tree object to load in all levels?
+
+step 1: Update Python code
+1.1 define the resource_path function in the App class
+
+    @staticmethod
+    def resource_path(relative_path):
+        try:
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath('.')
+        return os.path.join(base_path, relative_path)
+
+
+1.2 use this function whenever there is a path reference
+
+    path_str = TestApp.resource_path(os.path.join('level1', 'level2', 'sometext.txt'))
+    (might have to move App class to the top)
+
+    def build(self):
+        self.title = 'Testing folder levels for Kivy spec file'
+        return Builder.load_file(self.resource_path('gui.kv'))
+
+
+1.3 update the if __name__ statement for the MEIPASS path
+
+    # === Add to create executable with PyInstaller ======
+    if hasattr(sys, '_MEIPASS'):
+        resource_add_path((os.path.join(sys._MEIPASS)))
+    # ==== end ===========================================
